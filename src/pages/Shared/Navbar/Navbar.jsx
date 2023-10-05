@@ -38,7 +38,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <h2 className="mr-5">{user.email}</h2>
+                <h2 className="mr-5">{
+                    user&& user.email}</h2>
                 {
                     user ? <button onClick={handleSignOut} className="btn">SignOut</button> : <Link to='/login'>
                     <button className="btn">Login</button>
